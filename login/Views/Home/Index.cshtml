@@ -1,0 +1,17 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    string rol = "Admin";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    @if(rol=="Admi")
+    {
+        <h5>Welcome administrator!!!!</h5>
+    }
+    else
+    {
+        <script>alert('No eres administrador');</script>
+    }
+    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>

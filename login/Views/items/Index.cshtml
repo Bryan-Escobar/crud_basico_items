@@ -1,0 +1,33 @@
+﻿@model List<login.Models.Item> // This is the model that is passed to the view
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h3>Index</h3>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Price</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(Item item in Model)
+        {
+           <tr>
+                <td>@item.Name</td>
+                <td>@item.Price</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.id">Edit</a>
+                    <a asp-action="Delete" asp-route-id="@item.id">Delete</a>
+                </td>
+           </tr>
+        }
+    </tbody>
+</table>
+<div>
+    <a asp-action="Create" class="btn btn-primary">
+            Create
+    </a>
+
+</div>

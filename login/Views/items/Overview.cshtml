@@ -1,0 +1,41 @@
+﻿@model login.Models.Item //indica el tipo de modelo que la vista espera
+
+@{
+    var message = "Hello world!!";
+    var items = new List<string> { "item1", "item2", "item3" };
+    var isLoggedIn = true;
+}
+
+<form asp-action="Submit">
+    <div>
+    <input asp-for="Name"/>
+
+    </div>
+    <button type="submit">Submit</button>
+
+</form>
+
+
+
+
+<p>@Model.Name</p>
+
+<p> This is the name of the item @Model.Name</p>
+
+<p>@message</p>
+
+<ul>
+    @foreach(var item in items)
+    {
+        <li>@item</li>
+    }
+</ul>
+
+@if(isLoggedIn)
+{
+    <p>Welcome Back!</p>
+}
+else
+{
+    <p>Please log in</p>
+}
