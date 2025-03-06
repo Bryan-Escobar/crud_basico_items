@@ -12,3 +12,5 @@
 ```Update-Database
 
 3-Ejecutar proyecto
+
+4-ir a ruta [url generada]/items
