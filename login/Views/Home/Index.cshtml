@@ -14,4 +14,11 @@
         <script>alert('No eres administrador');</script>
     }
     <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <a asp-action="index" asp-controller="Items" class="btn btn-primary">
+        Administrar items
+    </a>
+
+    <a asp-action="SendEmail" asp-controller="Home" class="btn btn-primary">
+        enviar correo
+    </a>
 </div>

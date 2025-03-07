@@ -19,6 +19,7 @@
                 <td>@item.Price</td>
                 <td>
                     <a asp-action="Edit" asp-route-id="@item.id">Edit</a>
+@*                     asp-route-id, especifica los valores que se le pasarán al controlador, en este caso el id *@
                     <a asp-action="Delete" asp-route-id="@item.id">Delete</a>
                 </td>
            </tr>
